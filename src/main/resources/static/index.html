@@ -1,0 +1,210 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+<body>
+<h2>HEX Automated Test Analysis</h2>
+<ul class="nav nav-pills">
+  <li class="active"><a data-toggle="pill" href="#home">Experiment Status</a></li>
+  <li><a data-toggle="pill" href="#menu1">Deep Dive</a></li>
+  <li><a data-toggle="pill" href="#menu2">Summary</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+          <form>
+            <div class="form-group row">
+              <label for="" class="col-sm-2 form-control-label">Codes</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="experimentContainer" data-live-search="true">
+	  <!-- 
+              <option data-tokens="Exp-1" value="abhi" >1234</option>
+	                <option data-tokens="Exp-2" value="raghu" >1234567</option>
+	                <option data-tokens="Exp-3" value="abhi" >43q</option>
+ -->
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+							<th>experimentCode</th>
+							<th>experimentName</th>
+							<th>variantCode</th>
+							<th>variantName</th>
+							<th>status</th>
+							<th>startDate</th>
+							<th>visitors</th>
+							<th>purchaser</th>
+							<th>recommendation</th>
+						</tr>
+      </tr>
+    </thead>
+    <tbody id="tableContainer">
+      <!-- 
+<tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+ -->
+    </tbody>
+  </table>
+  
+  <button type="button" id="recommendationButton" class="btn btn-success">Apply Recommendation</button>
+  </div>
+  
+  
+  <div id="menu1" class="tab-pane fade">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+          <form>
+            <div class="form-group row">
+              <label for="" class="col-sm-2 form-control-label">Variants</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="experimentContainer1" data-live-search="true">
+	  <!-- 
+              <option data-tokens="Exp-1" value="abhi" >1234</option>
+	                <option data-tokens="Exp-2" value="raghu" >1234567</option>
+	                <option data-tokens="Exp-3" value="abhi" >43q</option>
+ -->
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<!-- 
+<form id="rulesContainer">
+
+  <div class="checkbox">
+  <label><input type="checkbox" value="">Test atleast a week old</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Rule 2</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Rule 3</label>
+</div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+  </div>
+ -->
+ 
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>rule</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody id="tableContainer1">
+      <!-- 
+<tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+ -->
+    </tbody>
+  </table>
+</div>
+
+<div id="menu2" class="tab-pane fade">
+
+<table class="table table-striped">
+   <thead>
+      <tr>
+							<th>variantCodes</th>
+							<th>recommendation</th>
+						</tr>
+      </tr>
+    </thead>
+    <tbody id="tableContainer2">
+      <!-- 
+<tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+ -->
+    </tbody>
+  </table>
+  <button type="button" id="recommendationButton1" class="btn btn-success">Apply Recommendation</button>
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+
+</body>
+
+
+</html>
